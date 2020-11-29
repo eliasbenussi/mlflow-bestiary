@@ -23,7 +23,7 @@ def main():
 
     X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.15)
 
-    pipe = Pipeline([('scaler', StandardScaler()), ('pca', PCA()), ('dt', DecisionTreeClassifier())])
+    pipe = Pipeline([("scaler", StandardScaler()), ("pca", PCA()), ("dt", DecisionTreeClassifier())])
     pipe.fit(X_train, y_train)
 
     y_pred = pipe.predict(X_test)
